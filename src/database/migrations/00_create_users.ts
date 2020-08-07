@@ -6,7 +6,7 @@ export async function up(knex: Knex) {
         table.increments('id').primary();
         table.string('name').notNullable();
         table.string('avatar').notNullable();
-        table.string('whatsappp').notNullable();
+        table.string('whastapp').notNullable();
         table.string('bio').notNullable();
     })
 
