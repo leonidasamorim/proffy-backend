@@ -5,6 +5,7 @@ import routes from './routes';
 const app = express();
 
 //active express to read post json
+app.use(cors());
 app.use(express.json()); 
 app.use(routes);
 
