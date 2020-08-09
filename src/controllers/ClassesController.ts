@@ -43,7 +43,7 @@ export default class ClassesController {
     const {
       name,
       avatar,
-      whastapp,
+      whatsapp,
       bio,
       subject,
       cost,
@@ -56,7 +56,7 @@ export default class ClassesController {
       const insertedUsersIds = await trx("users").insert({
         name,
         avatar,
-        whastapp,
+        whatsapp,
         bio,
       });
 
@@ -85,6 +85,7 @@ export default class ClassesController {
 
       return response.status(201).send();
     } catch (err) {
+      console.log(err);
       await trx.rollback();
       return response.status(400).json({
         error: "Unexpected error while creating new class",
